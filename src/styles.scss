@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+$background-color: #252525 !important; //!important força que a regra tenha a prioridade
+$font-color: #fff !important;
+
+.p-card{
+    background-color: $background-color;
+    color: $font-color;
+}
