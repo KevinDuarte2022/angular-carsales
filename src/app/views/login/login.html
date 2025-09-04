@@ -1,18 +1,21 @@
-<div class="grid justify-content-center">
+<div class="grid justify-content-center card">
   <div class="col-10 md:col-6 lg:col-4">
     <p-card>
       <div class="grid">
+        <div class="text-center col-12">
+            <i class="fas fa-car fa-4x" style="color: #007ad9;"></i>
+          <h2 class="text-center">Car Sales</h2>
+        </div>
         <div class="col-12">
           <label>Usuário</label>
-          <input type="text" pInputText [(ngModel)]="value" />
+          <input class="col-12" type="text" pInputText [(ngModel)]="value" />
         </div>
         <div class="col-12">
           <label>Senha</label>
-          <input type="text" pInputText [(ngModel)]="value" />
+          <input class="col-12" type="text" pInputText [(ngModel)]="value" />
         </div>
         <div class="col-12">
-          <label>Confirmar</label>
-          <input type="text" pInputText [(ngModel)]="value" />
+          <p-button class="p-button" label="Entrar"></p-button>
         </div>
       </div>
     </p-card>

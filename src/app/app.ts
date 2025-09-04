@@ -1,10 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ButtonDemo } from './button-demo';
 import { CardModule } from 'primeng/card';
 import { Login } from './views/login/login';
-import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
 
 
 @Component({
