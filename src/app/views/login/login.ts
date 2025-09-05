@@ -6,6 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { RequestLogin } from '../../resources/models/RequestLogin';
 import { LoginService } from '../../resources/services/loginService';
 import { error } from 'console';
+import { AlertService } from '../../resources/services/alert-service';
 
 
 @Component({
@@ -18,7 +19,7 @@ import { error } from 'console';
 export class Login implements OnInit {
   public requestLogin!: RequestLogin;
 
-  constructor(private loginService: LoginService){}
+  constructor(private loginService: LoginService, private alertService: AlertService){}
 
   ngOnInit(): void {
     this.requestLogin = new RequestLogin()
@@ -27,10 +28,11 @@ export class Login implements OnInit {
   public doLogin(): void{
     this.loginService.doLogin(this.requestLogin).subscribe(
       (data) => {
-        console.log(data)
+       this.alertService.info('Funcionalidade ainda não implementada')
       },
-      (error) =>{
-        console.error(error)
+      (httpError) =>{
+        this.alertService.error(httpError.error.message)
+      
       }
     )
   
